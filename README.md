@@ -8,7 +8,7 @@ The project starts by creating a database named 'Retail_sales_db'.
 
 
 
-**sql**
+'''sql
 CREATE DATABASE sql_project_p2;
 
 CREATE TABLE retail_sales
