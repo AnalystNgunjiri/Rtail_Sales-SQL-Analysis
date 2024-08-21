@@ -66,7 +66,7 @@ The following sql queries were developed to answer specific business questions:
 '''
 
 
-3. **Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05**
+2. **Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05**
 
 
 '''
@@ -94,7 +94,7 @@ The following sql queries were developed to answer specific business questions:
 '''
 
 
-5. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**
+4. **Write a SQL query to find the average age of customers who purchased items from the 'Beauty' category.**
 
    
 '''
@@ -104,7 +104,7 @@ The following sql queries were developed to answer specific business questions:
 '''
 
 
-7. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**
+5. **Write a SQL query to find all transactions where the total_sale is greater than 1000.**
 
    
 '''
@@ -113,7 +113,7 @@ The following sql queries were developed to answer specific business questions:
 '''
 
 
-9. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**
+6. **Write a SQL query to find the total number of transactions (transaction_id) made by each gender in each category.**
 
     
 '''
@@ -127,7 +127,7 @@ ORDER BY 1
 '''
 
 
-11. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**
+7. **Write a SQL query to calculate the average sale for each month. Find out best selling month in each year**
 
     
 '''
@@ -171,7 +171,7 @@ limit 5
 
 
 
-10. **Write a SQL query to find the number of unique customers who purchased items from each category.**
+9. **Write a SQL query to find the number of unique customers who purchased items from each category.**
 
     
 '''
@@ -184,7 +184,7 @@ group by category
 
 
 
-12. **Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)**
+10. **Write a SQL query to create each shift and number of orders (Example Morning <=12, Afternoon Between 12 & 17, Evening >17)**
 
     
 '''
