@@ -1,9 +1,9 @@
-### 1. Database Set up
+## 1. Database Set up
 
-## Database creation
+### Database creation
 The project starts by creating a database named 'Retail_sales_db'.
 
-## Table Creation
+### Table Creation
  A table named 'Retail_Sales' is created to store the data. The table structure colums for transaction id, sales date. sales time, customer id,gender,age product category, quantity sold, price per unit, cost of goods sold,cogs and total sales.
 
 
