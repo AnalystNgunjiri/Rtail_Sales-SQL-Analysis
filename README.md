@@ -97,7 +97,6 @@ The following sql queries were developed to answer specific business questions:
    FROM retail_sales
    
    WHERE sale_date = '2022-11-05';
-   
 '''
 
 
