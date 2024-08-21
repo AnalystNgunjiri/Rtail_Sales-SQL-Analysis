@@ -14,6 +14,7 @@ CREATE DATABASE sql_project_p2;
 
 '''
 CREATE TABLE retail_sales
+
             (
                 transaction_id INT PRIMARY KEY,	
 		
