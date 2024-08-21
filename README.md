@@ -50,22 +50,37 @@ CREATE TABLE retail_sales
 
 '''sql
     select count(*) from retail_sales;
+    
     select distinct(count customer_id) from retail_sales;
+    
     select distinct category from retail_sales;
+    
     select * from retail_sales
+    
     where
+    
     sales_date is null or sales_time is null or customer_id is null or gender is null 
+    
     or age is null or category is null or quantity is null or price_per_unit is null or cogs is numm;
 
    DELETE FROM retail_sales
+   
    WHERE 
+   
     transaction_id IS NULL
+    
     OR sale_date IS NULL
+    
     OR sale_time IS NULL
+    
     OR gender IS NULL
+    
     OR category IS NULL
+    
     OR quantity IS NULL
+    
     OR cogs IS NULL
+    
     OR total_sale IS NULL;  
 '''
 
@@ -77,9 +92,13 @@ The following sql queries were developed to answer specific business questions:
 
    
 '''sql
+
    SELECT *
+   
    FROM retail_sales
+   
    WHERE sale_date = '2022-11-05';
+   
 '''
 
 
@@ -88,13 +107,21 @@ The following sql queries were developed to answer specific business questions:
 
 '''
    SELECT *
+   
    FROM retail_sales
+   
    WHERE 
+   
     category = 'Clothing'
+    
     AND 
+    
     TO_CHAR(sale_date, 'YYYY-MM') = '2022-11'
+    
     AND
+    
     quantity >= 4
+    
 '''   
 
  
@@ -103,11 +130,17 @@ The following sql queries were developed to answer specific business questions:
     
 '''
     SELECT 
+    
     category,
+    
     SUM(total_sale) as net_sale,
+    
     COUNT(*) as total_orders
+    
     FROM retail_sales
+    
     GROUP BY 1
+    
 '''
 
 
@@ -116,8 +149,11 @@ The following sql queries were developed to answer specific business questions:
    
 '''
     select round(avg(age), 2) as avg_sales
+    
     from retail_sales
+    
     where category = 'Beauty';
+    
 '''
 
 
@@ -126,7 +162,9 @@ The following sql queries were developed to answer specific business questions:
    
 '''
   SELECT * FROM retail_sales
+  
   WHERE total_sale > 1000
+  
 '''
 
 
@@ -135,12 +173,20 @@ The following sql queries were developed to answer specific business questions:
     
 '''
  SELECT 
+ 
  category,
+ 
  gender,
+ 
  COUNT(*) as total_trans
+ 
 FROM retail_sales
-GROUP BY category, gender
+
+GROUP BY category,
+gender
+
 ORDER BY 1
+
 '''
 
 
@@ -149,28 +195,47 @@ ORDER BY 1
     
 '''
 SELECT  year,
+
 month,
+
 rank
+
 FROM
+
 (	
 select
+
 EXTRACT(YEAR FROM sales_date) as year,
+
 EXTRACT(MONTH FROM sales_date) as month,
+
 AVG(total_sales) as avg_sale,
+
 rank() over(partition by EXTRACT(YEAR FROM sales_date) order by AVG(total_sales) DESC ) as rank
+
 FROM retail_sales
+
 GROUP BY 1, 2
+
 ) as T1
+
 where rank = 1
 
 
 SELECT 
+
 EXTRACT(YEAR FROM sales_date) as year,
+
 EXTRACT(MONTH FROM sales_date) as month,
+
 AVG(total_sales) as avg_sale,
+
 rank() over(partition by EXTRACT(MONTH FROM sales_date) order by AVG(total_sales) DESC )
+
 FROM retail_sales
+
 GROUP BY 1, 2
+
 '''
 	
 
@@ -180,10 +245,15 @@ GROUP BY 1, 2
    
 '''
 select 
+
 total_sales as highest
+
 from retail_sales 
+
 order by highest desc
+
 limit 5
+
 '''
 
 
@@ -193,10 +263,15 @@ limit 5
     
 '''
 select 
+
 category,
+
 count(transaction_id) as Unique_id
+
 from retail_sales 
+
 group by category
+
 '''
 
 
@@ -208,21 +283,35 @@ group by category
 select * from retail_sales
 
 with hourly_sales
+
 as
+
 (
 SELECT *,
+
 CASE
+
 when EXTRACT(hour from sales_time) < 12  then 'Morning'
+
 when EXTRACT(hour from sales_time) between 12 and 17 then 'Afternoon'
+
 else 'Evening'
+
 end as Shift
+
 from retail_sales	
 )
+
 select 
+
 shift,
+
 count(*)as total_orders
+
 from hourly_sales
+
 group by shift
+
 '''
 
 ## Findings
@@ -247,7 +336,9 @@ group by shift
 ## Conclusion
 
 This pproject serves a comprehensive introduction to SQL for data analysis, covering database setup, data cleaning, exploratory data analysis and 
+
 business-driven SQL queries. The findoinfg from this project can help drive business decisions by understaxnding sales patterns, customer behavior
+
 and product perfomance.
 
 
