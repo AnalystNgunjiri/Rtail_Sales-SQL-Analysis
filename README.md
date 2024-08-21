@@ -56,7 +56,6 @@ CREATE TABLE retail_sales
     select distinct category from retail_sales;
     
     select * from retail_sales
-    
     where
     
     sales_date is null or sales_time is null or customer_id is null or gender is null 
