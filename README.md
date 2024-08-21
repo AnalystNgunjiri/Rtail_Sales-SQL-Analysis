@@ -164,7 +164,7 @@ The following sql queries were developed to answer specific business questions:
 '''
   SELECT * FROM retail_sales
   
-  WHERE total_sale > 1000
+  WHERE total_sale > 1000;
   
 '''
 
