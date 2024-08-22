@@ -111,7 +111,7 @@ The following sql queries were developed to answer specific business questions:
 '''
 
 
-2. **Q.1 Write a SQL query to retrieve all columns for sales made on '2022-11-05**
+2. **Write a SQL query to retrieve all columns for sales made on '2022-11-05**
 
 
 '''
