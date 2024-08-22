@@ -1,6 +1,5 @@
 ## Retail Store Set Up
 ---
-|--------------------|
 ![](62f4a545-3216-4185-b958-da426a40ad58.png)
 
 ## 1. Database Set up
