@@ -24,12 +24,13 @@ The project starts by creating a database named 'Retail_sales_db'.
 
 - **Category Count**: Identify all unique products categories in the dataset
 
-- **Null Value Check**: Checks for al null values in the dataset and delete records with missing data.
+- **Null Value Check**: Checks for all null values in the dataset and delete records with missing data.
 
 
 
 '''sql
     select count(*) from retail_sales;
+    ![]
     
     select distinct(count customer_id) from retail_sales;
     
