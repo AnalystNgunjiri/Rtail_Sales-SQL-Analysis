@@ -30,7 +30,7 @@ The project starts by creating a database named 'Retail_sales_db'.
 
 '''sql
     select count(*) from retail_sales;
-    ![]
+    ![](R2.jpg)
     
     select distinct(count customer_id) from retail_sales;
     
