@@ -42,7 +42,7 @@ The project starts by creating a database named 'Retail_sales_db'.
     sales_date is null or sales_time is null or customer_id is null or gender is null 
     
     or age is null or category is null or quantity is null or price_per_unit is null or cogs is numm;
-
+![](R3.jpg)
    DELETE FROM retail_sales
    
    WHERE 
