@@ -12,40 +12,9 @@ The project starts by creating a database named 'Retail_sales_db'.
 ### Table Creation
 ---
  A table named 'Retail_Sales' is created to store the data. The table structure colums for transaction id, sales date. sales time, customer id,gender,age product category, quantity sold, price per unit, cost of goods sold,cogs and total sales.
+![](
 
 
-
-'''sql
-CREATE DATABASE sql_project_p2;
-'''
-
-'''
-CREATE TABLE retail_sales
-
-            (
-                transaction_id INT PRIMARY KEY,	
-		
-                sale_date DATE,	 
-		
-                sale_time TIME,	
-		
-                customer_id	INT,
-		
-                gender	VARCHAR(15),
-		
-                age	INT,
-		
-                category VARCHAR(15),	
-		
-                quantity	INT,
-		
-                price_per_unit FLOAT,	
-		
-                cogs	FLOAT,
-		
-                total_sale FLOAT
-            );
-'''
 ### 2. Data Exploration & Cleaning
 
 - **Record Count**: Determine the total number of records in the dataset.
